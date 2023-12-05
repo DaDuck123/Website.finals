@@ -520,8 +520,10 @@ background-color: #bf282d;
 }
 
 #vid_wrapper{
+    width: 1080px;
     padding: 70px 0 50px 0;
     display: flex;
+    justify-content: center;
 }
 #sidebar_wrapper{
     background-image: url(../images/secbg1.png);
@@ -600,6 +602,7 @@ background-color: #bf282d;
     flex-direction: column;
     align-items: center;
     padding: 0 90px 0 100px;
+    width: 1080px;
     height: 250px;
 
 }
@@ -632,7 +635,7 @@ background-color: #bf282d;
     font-size: 22px;
     color: #ffffff;
     height: 80px;
-    width: 260px;
+    width: 280px;
     background-color: #193a6b;
 }
 #facebook_container{
@@ -649,6 +652,9 @@ background-color: #bf282d;
     display: flex;  
     flex-direction: column;
     align-items: center;
+}
+#custompaint_container img{
+    z-index: 1;
 }
 #cp_box{
     padding: 100px 0 140px 0;
@@ -670,7 +676,6 @@ background-color: #bf282d;
 }
 #cp_line{
     background-color: #ffffff;
-    height: 3px;
     width: 100px;
     margin-bottom: 20px;
 }
@@ -693,4 +698,116 @@ background-color: #bf282d;
     cursor: pointer;
     background-color: rgba(255, 255, 255, 1);
     color: #000000;
+}   /*  ENDING custom paint */
+footer{ /*  STARTING FOOTER */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    height: 1180px;
+    background-color: #000000;
+}
+#footer_bg{
+    z-index: auto;
+    display: flex;
+    height: 960px;
+    width: 1910px;
+    background-image: url(../images/footerbg.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    justify-content: center;
+}
+#footer_contacts{
+    width: 1080px;
+    margin: 55px 0 10px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 240px 0 0 0;
+}
+#footer_contacts h1{
+    font-size: 65px;
+}
+#contact_infos{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas: 
+    " a b "
+    " a c ";
+    gap: 10px;
+}
+#item1{
+    grid-area: a;
+}
+#item2{
+    grid-area: b;
+    margin-bottom: 20px;
+}
+#item3{
+    grid-area: c;
+}
+#contact_infos h4{
+    font-size: 22px;
+    text-shadow: none;
+    color: #ffffff;
+    line-height: 40px;
+}
+#footer_contacts p{
+    text-align: center;
+    font-size: 18px;
+    color: #ffffff;
+    line-height: 30px;
+    font-weight: bolder;
+    letter-spacing: 1px;
+}
+#ft_margin{
+    margin: 30px 0 20px 0;
+}
+#creditcards{
+    margin-top: 68px;
+}
+#creditcards h4{
+    text-align: center;
+    font-size: 18px;
+    color: #ffffff;
+    font-weight: 200;
+}
+.footer_nav{    /*  footer nav */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 30px;
+    background-image: url(../images/ftnav.png);
+    background-size:100%;
+    height: 40px;
+    width: 1700px;
+}
+.navbarbox{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50px;
+}
+.footer_nav .navbarbox nav ul{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    list-style: none;
+    color: #ffffff;
+
+}
+.footer_nav .navbarbox nav ul li a{
+    text-decoration: none;
+    margin-left: 16px;
+    margin-right: 16px;
+    color: #ffffff;
+}
+.footer_nav .navbarbox nav ul li a:hover{
+    text-decoration: underline;
+}
+#ft_copyright{
+    color: #ffffff;
+    margin-top: 40px;
+    font-size: 20px;
 }
