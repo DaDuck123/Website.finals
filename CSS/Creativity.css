@@ -222,7 +222,7 @@ h4{
 .main-infos{
     position: absolute;
     margin: 140px 210px 5px 210px;
-    height: 100%;
+    height: 800px;
 }
 article{
     display: flex;
@@ -370,7 +370,15 @@ article{
     height: 100%;
 }
 .product-wrapper{
+    display: flex;
+    justify-content: center;
     margin: 0 210px 5px 210px;
+    height: 500px;
+}
+.product-box{
+    width: 1080px;
+    display: flex;
+    justify-content: center;
 }
 .fp-title{
     display: flex;
@@ -400,8 +408,9 @@ article{
     margin-top: 10px;
 }
 .productsection{
+    width: 100%;
     display: flex;
-    justify-content: space-around;
+    gap: 27px;
 }
 .hoddieimg,
 .calvinimg,
@@ -409,6 +418,8 @@ article{
 .nissanimg {
     width: 250px;
     height: 260px;
+    background-position: center;
+    background-size: cover;
 }
 .price-tag{
     text-align: center;
@@ -440,7 +451,7 @@ article{
     border: none;
     font-size: 18px;
     width: 100%;
-    height: 60px;
+    height: 55px;
     background-color: #171717;
     color: #ffffff;
     margin-bottom: 20px;
@@ -455,9 +466,15 @@ article{
     margin-bottom: 30px;
 }
 .other-tabs{    /*  NEW TAB */
+    width: 100%;
+    display: flex;
+    gap: 10px;
+}
+.tab-box{
     display: flex;
     justify-content: center;
-    justify-content: space-between;
+    width: 700px;
+
 }
 .tabimg{
     height: 100px;
@@ -469,6 +486,7 @@ article{
     align-items: center;
     font-size: 18px;
     width: 170px;
+    height: 37px;
     padding: 15px 0px 10px 0px;
     margin-top: -10px;
     text-align: center;
@@ -481,13 +499,15 @@ article{
     align-items: center;
     font-size: 18px;
     width: 170px;
-    height: 36px;
+    height: 37px;
     padding: 15px 0px 10px 0px;
     margin-top: -10px;
     background-color: #193a6b;
     color: #ffffff;
 }
 .tab-wrapper{
+    display: flex;
+    justify-content: center;
     margin: 0px 390px;
     height: 160px;
 }
@@ -522,13 +542,12 @@ background-color: #bf282d;
     background-attachment: scroll;
     background-size: cover;
     background-position: center;
-    width: 2000px;
+    width: 1920px;
 }
 #vid_wrapper{
     width: 100%;
     padding: 70px 0 50px 0;
     display: flex;
-    justify-content: left;
 }
 #sidebar_wrapper{
     background-image: url(../images/secbg1.png);
