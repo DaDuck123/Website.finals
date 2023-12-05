@@ -510,29 +510,33 @@ article{
 }   /*  ENDING OF PRODUCTS*/
 
 #videobg{ /*    starting video page*/
-background-image: url(../images/bgsec.png);
-background-repeat: no-repeat;
-background-attachment: scroll;
-background-size: auto;
-background-position: right;
+display: flex;
+justify-content: center;
 height: 450px;
 background-color: #bf282d;
 }
-
+#vid_container{
+    background-image: url(../images/bgsec.png);
+    display: flex;
+    background-repeat: no-repeat;
+    background-attachment: scroll;
+    background-size: cover;
+    background-position: center;
+    width: 2000px;
+}
 #vid_wrapper{
-    width: 1080px;
+    width: 100%;
     padding: 70px 0 50px 0;
     display: flex;
-    justify-content: center;
+    justify-content: left;
 }
 #sidebar_wrapper{
     background-image: url(../images/secbg1.png);
-    height: 300px;
+    height: 320px;
     width: 650px;
     background-repeat: no-repeat;
     background-attachment: scroll;
-    background-size: auto;
-    background-position: right;
+    background-size: cover;
     background-color: #193a6b;
     display: flex;
     align-items: center;
