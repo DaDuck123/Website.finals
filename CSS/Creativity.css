@@ -460,7 +460,12 @@ article{
     height: 22px;
     margin-right: 10px;
 }
+.line_box{
+    display: flex;
+    justify-content: center;
+}
 .blackline{
+    width: 1080px;
     opacity: 0.2;
     margin-top: 20px;
     margin-bottom: 30px;
