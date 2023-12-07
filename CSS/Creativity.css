@@ -206,160 +206,152 @@ h4{
     border: none;
 }   /*End of Below the Header*/
 
-.main-container{ /* Starting Main Area*/
+
+#main_containerbg{   /* Starting Main Area*/
     width: 100%;
-    height: 927px;
-    background-color: #d9dfe5;
+    height: 945px;
 }
-.main-background{
+#main_container{       
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    height: 750px;
+    background-color: #e6e6e6;
+}
+#main_box{
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
     background-image: url(/images/sidecar.jpg);
     background-repeat: no-repeat;
-    background-attachment: scroll;
-    width: 550px;
-    height: 900px;
-    background-color: #d9dfe5;
+    background-size: 580px 945px;
+    height: 945px;
+    width: 1920px;
+    background-color: #e6e6e6;
 }
-.main-infos{
-    position: absolute;
-    margin: 140px 210px 5px 210px;
-    height: 800px;
-}
-article{
+#maininfos_padding{
     display: flex;
+    justify-content: center;
+    flex-direction: column;
+    padding: 140px 0 0 0;
+    margin: 0 90px 0 90px;
 }
-.sidebar{   /* side bar*/
-    position: relative;
-    align-items: center;
+#maininfos_box{
+    display: flex;
+    width: 1080px;
+    height: 600px;
 }
-#sidebox{
-    background-color: #bf282d;
-    background-size: cover;
-}
-#welcome{   /* Welcome text*/
+#maininfos_sidebg{
     display: flex;
     justify-content: center;
     align-items: center;
-    position: absolute;
-    width: 100%;
-    height: 100%;
+    background-image: url(../images/redwheel.png);
+    background-position: left;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 420px;
+    height: 600px;
+    background-color: #bf282d;
+}
+#maininfos_sidebg h4{
     font-family: 'Bebas Neue';
-    font-weight: 300;
-    text-align: center;
-    color: #ffffff;
     font-size: 90px;
-    text-shadow: 1px 2px 7px rgba(0,0,0.7);
+    font-weight: 500;
+    color: #ffffff;
 }
-.main-box{  /* Main info */
-    background-color: #ffffff;
-}
-.main{
+#maininfos_text{
     padding: 116px 72px 66px;
+    background-color: #ffffff;
+    width: 517px;
+    height: 417px;
 }
-#main-title{
-    font-family: 'Bebas Neue';
+#maininfos_text h1{
+    color: #193a6b;
     font-size: 90px;
-    color: #193a6b;
-    margin-bottom: 20px;
-}
-#color-text{
-    font-size: 20px;
-    font-family: 'Josefin Sans',sans-serif;
-    font-weight: 700;
-    color: #193a6b;
-}
-#redline{
-    width: 150px;
-    height: 3px;
-    margin-bottom: 40px;
-}
-.p-text{    /*  ENDING Main Info */
-    font-size: 20px;
-    font-family: 'Josefin Sans',sans-serif;
-}
-.section-bottom{    /*  Box SECTION below main */
-    position: relative;
-    top: -10px;
-    display: flex;
-
-}
-.section-box1,
-.section-box2,
-.section-box3,
-.section-box4,
-.section-box5{  /*  box of each section */
-    position: relative;
-    height: 200px;
-    width: 100%;
-}
-#section-box1,
-#section-box2{  /*  section image   */
-    height: 100%;
-    width: 100%;
-    background-color: #244f90;
-}
-#section-box3{
-    height: 100%;
-    width: 100%;
-    background-color: #244c88;
-}
-#section-box4{
-    height: 100%;
-    width: 100%;
-    background-color: #235298;
-}
-#section-box5{
-    height: 100%;
-    width: 100%;
-    background-color: #244f90;
-}
-.bottom-text1,
-.bottom-text2,
-.bottom-text3,
-.bottom-text4,
-.bottom-text5 {
-    margin-top: 32px;
-    width: 100%;
-    position: absolute;
     font-family: 'Bebas Neue';
-    text-align: center;
-    color: #ffffff;
-    font-size: 30px;
-    text-shadow: 3px 3px 3px rgba(0,0,0.7);
 }
-.section-text1,
-.section-text2,
-.section-text3,
-.section-text4,
-.section-text5{ 
-    margin-top: 80px;
-    margin-left: 25px;
-    width: 80%;
-    text-align: center;
-    color: #ffffff;
-    position: absolute;
-    font-size: 18px;
+#maininfos_text p{
+    font-size: 20px;
+    line-height: 25px;
     font-family: 'Josefin Sans',sans-serif;
-    font-weight: 100;
 }
-.click1,
-.click2,
-.click3,
-.click4,
-.click5{    /*  Click here */
-    text-decoration: none;
-    margin-top: 170px;
-    position: absolute;
+#maininfo_line{
+    background-color: #bf282d;
+    height: 2px;
+    width: 170px;
+    margin: 30px 0 50px 0;
+}
+#maininfos_text span{
+    font-weight: bolder;
+    color: #193a6b;
+}
+#belowmain_wrapper{ /*  BELOW MAIN */
+    display: flex;
+    width: 1080px;
+    height: 200px;
+    margin-top: -1px;
+}
+#box1,
+#box2,
+#box3,
+#box4,
+#box5{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 30px 10px 20px 10px;
     width: 100%;
-    text-align: center;
-    color: #ffffff;
-    font-family: 'Josefin Sans',sans-serif;
-    font-weight: 100;
+    height: 156px;
 }
-.click1:hover,
-.click2:hover,
-.click3:hover,
-.click4:hover,
-.click5:hover{
+.section_box h1{
+    text-shadow: 3px 3px 2px rgba(0,0,0, .4);
+}
+.section_box p{
+    margin-top: 15px;
+    text-align: center;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 20px;
+    color: #ffffff;
+}
+#box1{
+    background-image: url(../images/box1.png);
+    background-size: cover;
+    background-color: #1b4585;
+}
+#box2{
+    background-image: url(../images/box2.png);
+    background-color: #1b4585;
+    background-size: cover;
+}
+#box3{
+    background-image: url(../images/box3.png);
+    background-color: #153b74;
+    background-size: cover;
+}
+#box4{
+    background-image: url(../images/box4.png);
+    background-color: #1b4585;
+    background-size: cover;
+}   
+#box5{
+    background-image: url(../images/box5.png);
+    background-color: #0f3b7d;
+    background-size: cover;
+}
+.section_link{
+    text-decoration: none;
+    display: flex;
+    justify-content: center;
+    align-items: end;
+    width: 100%;
+    height: 100%;
+}
+.section_link a{
+    text-decoration: none;
+    font-weight: 500;
+}
+.section_link a:hover{
     text-decoration: underline;
 }   /*  ENDING OF main */
 
@@ -739,11 +731,10 @@ footer{ /*  STARTING FOOTER */
     z-index: auto;
     display: flex;
     height: 960px;
-    width: 1910px;
+    width: 100%;
     background-image: url(../images/footerbg.png);
     background-position: center;
     background-repeat: no-repeat;
-    background-size: cover;
     justify-content: center;
 }
 #footer_contacts{
@@ -806,10 +797,18 @@ footer{ /*  STARTING FOOTER */
     justify-content: center;
     align-items: center;
     margin-top: 30px;
-    background-image: url(../images/ftnav.png);
-    background-size:100%;
+    width: 1500px;
     height: 40px;
-    width: 1700px;
+}
+.ft_navbg{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url(../images/ftnav.png);
+    background-size: 100%;
+    width: 100%;
+    height: 100%;
+
 }
 .navbarbox{
     display: flex;
