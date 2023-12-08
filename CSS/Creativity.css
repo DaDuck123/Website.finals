@@ -3,59 +3,84 @@
     padding: 0;
     font-family: 'Josefin Sans',sans-serif;
 }
-.container{
-    position: relative;
+#header_container{
+    display: flex;
+    justify-content: center;
     width: 100%;
-    height: 900px;
+    height: 960px;
+}
+.container{
+    z-index: auto;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: start;
+    width: 1920px;
+    height: 960px;
     background-image: url(../images/bgimage.jpg);
     background-position: center;
     background-repeat: no-repeat;
     background-attachment: scroll;
-    background-size: cover;
+    background-size: auto;
 }
-
-.navbar{                /* navbar */
-    height: 40px;
-    display: flex;
-    align-items: center;
+#navbox_bg{                /* navbar */
+    z-index: 1;
+    position: absolute;
+    margin: 0;
     background-color: rgba(32,62,107,.7);
+    width: 100%;
+    height: 40px;
 }
-.container .navbar nav{
-    flex: 1;
-    text-align: center;
+.navbar{
+    z-index: 2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 40px;
 }
-.container .navbar nav ul li a:hover{
-    text-decoration: underline;
-}
-.container .navbar nav ul li{
+.container .navbar nav ul{
+    display: flex;
+    justify-content: center;    
+    align-items: center;
     list-style: none;
-    display: inline-block;
+    color: #ffffff;
+    font-family: 'Josefin Sans',sans-serif;
+    font-weight: 300;
+
+}
+.container .navbar nav ul li a{
+    text-decoration: none;
     margin-left: 16px;
     margin-right: 16px;
     color: #ffffff;
 }
-.container .navbar nav ul li a{
-    text-decoration: none;
-    color: #ffffff;
-    font-size: 18px;
-}
-.container .navbar nav ul{
-    color: #ffffff;
+.container .navbar nav ul li a:hover{
+    text-decoration: underline;
 }                        /* End of navbar*/
 
 
 header{                   /* Header */
-    padding: 28px 10px 28px 10px;
+    position: absolute;
+    padding: 70px 0 28px 0;
+    width: 1080px;
+    height: 200px;
 }
-.wrapper{
+.header_wrapper{
+    position: absolute;
+    z-index: 1;
     display: flex;
-    margin: 0px 210px 0px 210px;
-    justify-content: space-between;
+    gap: 600px;
 }
-
 .header_apps{       /*   header  apps    */
     display: flex;
     flex-direction: column;
+    width: 250px;
+    font-family: 'Josefin Sans',sans-serif;
+    font-weight: 200;
+}
+.header_apps h2{
+    font-family: 'Josefin Sans',sans-serif;
+    font-weight: 400;
 }
 .app_icons a i{
     width: 40px;
@@ -74,9 +99,10 @@ header{                   /* Header */
 }
 .info_icons a{
     text-decoration: none;
-    font-weight: bold;
+    font-weight: 400;
 }
 .info_icons a:hover{
+    cursor: pointer;
     text-decoration: underline;
 }
 #discount{          /*  discount image  */
@@ -153,22 +179,33 @@ h1{
 }                   /* End of Search Button*/
 
 .below_header{      /*Below the Header*/
-    margin: 50px 210px 0px 210px;
+    z-index: auto;
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    justify-content: end;
+    width: 1080px;
+    height: 920px;
+
+
 }
 .quote{             /* QUOTE button*/
     width: 300px;
     margin-bottom: 20px;
 }
-#textmed{           /*  text info   */
+#quote{
+    cursor: pointer;
+}
+.below_header h4{           /*  text info   */
     letter-spacing: 2px;
     font-family: 'Bebas Neue';
     font-size: 70px;
     color: #ffffff;
     font-weight: 300;
 }
-#textbig{
+.below_header h4:nth-child(3){
     line-height: 130px;
-    letter-spacing: 4px;
+    letter-spacing: 1px;
     font-family: 'Bebas Neue';
     font-weight: 300;
     font-size: 160px;
@@ -177,34 +214,42 @@ h1{
 h4{
     text-shadow: 1px 2px 7px rgba(0,0,0.7);
 }
-.line{
+#line{
     margin-top: 10px;
-    width: 20%;
-    height: 7px;
+    width: 170px;
+    height: 2px;
+    margin: 30px 0 20px 0;
     background-color: #ffffff;
-    color: #ffffff;
+
 }
-#textbelow{
+#belowhdr_info{
     font-family: 'Josefin Sans',sans-serif;
     line-height: 25px;
     font-size: 19px;
-    font-weight: bolder;
+    font-weight: 500;
     letter-spacing: 1px;
     margin: 20px 0;
-    width: 35%;
+    width: 500px;
     color: #ffffff;
 }
 .buy-btn{
     position: absolute;
-    margin-top: 10px;
+    margin-top: 20px;
     width: 270px;
     height: 70px;
     background-color: #b43a3a;
     color: #ffffff;
     text-align: center;
-    font-size: 22px;
+    font-size: 20px;
     border: none;
-}   /*End of Below the Header*/
+    font-weight: 300;
+    transition: .8s;
+}
+.buy-btn:hover{
+    cursor: pointer;
+    background-color: #193a6b;
+}
+   /*End of Below the Header*/
 
 
 #main_containerbg{   /* Starting Main Area*/
@@ -274,6 +319,7 @@ h4{
     font-size: 20px;
     line-height: 25px;
     font-family: 'Josefin Sans',sans-serif;
+    font-weight: 300;
 }
 #maininfo_line{
     background-color: #bf282d;
@@ -282,7 +328,7 @@ h4{
     margin: 30px 0 50px 0;
 }
 #maininfos_text span{
-    font-weight: bolder;
+    font-weight: 700;
     color: #193a6b;
 }
 #belowmain_wrapper{ /*  BELOW MAIN */
@@ -313,6 +359,8 @@ h4{
     font-weight: 500;
     line-height: 20px;
     color: #ffffff;
+    font-family: 'Josefin Sans',sans-serif;
+    font-weight: 300;
 }
 #box1{
     background-image: url(../images/box1.png);
@@ -349,7 +397,8 @@ h4{
 }
 .section_link a{
     text-decoration: none;
-    font-weight: 500;
+    font-family: 'Josefin Sans',sans-serif;
+    font-weight: 300;
 }
 .section_link a:hover{
     text-decoration: underline;
@@ -378,13 +427,13 @@ h4{
     align-items: center;
     text-align: center;
 }
-#featured{
+.fp-title h1{
     font-family: 'Josefin Sans',sans-serif;
     font-size: 25px;
     font-weight: bolder;
     color: #4d4d4d;
 }
-#product{
+.fp-title h1:nth-child(2){
     margin-top: -10px;
     font-family: 'Bebas Neue';
     font-size: 60px;
@@ -421,7 +470,7 @@ h4{
     font-size: 20px;
     color: #193a6b;
     font-family: 'Josefin Sans',sans-serif;
-    font-weight: 1000;
+    font-weight: 500;
     text-align: center;
 
 }
@@ -440,6 +489,8 @@ h4{
 
 }
 .opt-btn{
+    font-family: 'Josefin Sans',sans-serif;
+    font-weight: 300;
     border: none;
     font-size: 18px;
     width: 100%;
@@ -447,6 +498,12 @@ h4{
     background-color: #171717;
     color: #ffffff;
     margin-bottom: 20px;
+    transition: .8s;
+}
+.opt-btn:hover{
+    cursor: pointer;
+    background-color: #193a6b;
+    opacity: .8s;
 }
 .cart{
     height: 22px;
@@ -465,7 +522,7 @@ h4{
 .other-tabs{    /*  NEW TAB */
     width: 100%;
     display: flex;
-    gap: 10px;
+    gap: 6px;
 }
 .tab-box{
     display: flex;
@@ -483,24 +540,20 @@ h4{
     align-items: center;
     font-size: 18px;
     width: 170px;
-    height: 37px;
+    height: 70px;
     padding: 15px 0px 10px 0px;
     margin-top: -10px;
     text-align: center;
     background-color: #193a6b;
     color: #ffffff;
+    font-weight: 300;
+    border: none;
+    transition: .8s;
 }
-.othertab-text1{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: 18px;
-    width: 170px;
-    height: 37px;
-    padding: 15px 0px 10px 0px;
-    margin-top: -10px;
-    background-color: #193a6b;
-    color: #ffffff;
+.othertab-text:hover{
+    cursor: pointer;
+    background-color: #000000;
+    opacity: 1s;
 }
 .tab-wrapper{
     display: flex;
@@ -563,7 +616,7 @@ background-color: #bf282d;
     flex-direction: column;
     margin-left: 120px;
 }
-#sidebar_title{
+#sidebar_box h1{
     font-size: 50px;
     margin-top: -70px;
 }
@@ -573,14 +626,19 @@ background-color: #bf282d;
     margin: 20px 0 30px 0;
     width: 100px;
 }
-#sidebar_text{
+#sidebar_box h4{
     color: #ffffff;
     text-shadow: none;
     font-weight: 100;
     font-size: 17px;
+    font-family: 'Josefin Sans',sans-serif;
+    font-weight: 300;
 }
 #sidebar_click{
+    margin-top: 10px;
     text-decoration: none;
+    font-family: 'Josefin Sans',sans-serif;
+    font-weight: 300;
 }
 #sidebar_click:hover{
     text-decoration: underline;
@@ -592,15 +650,17 @@ background-color: #bf282d;
 #video_text{
     margin: 20px 0 0 60px;
 }
-#video_title{
+#video_text h1{
     font-size: 40px;
 }
-#video_desc{
+#video_text h4{
     line-height: 25px;
     color: #ffffff;
     font-weight: 100;
     font-size: 18px;
     text-shadow: none;
+    font-family: 'Josefin Sans',sans-serif;
+    font-weight: 300;
 }
 #reviews_container{ /*  Starting page reviews   */
     padding: 90px 0 20px 0;
@@ -635,6 +695,8 @@ background-color: #bf282d;
     line-height: 25px;
     text-align: center;
     font-size: 19px;
+    font-family: 'Josefin Sans',sans-serif;
+    font-weight: 200;
 
 }
 #users_review h4{
@@ -657,6 +719,12 @@ background-color: #bf282d;
     height: 80px;
     width: 280px;
     background-color: #193a6b;
+    transition: .8s;
+}
+#review_button button:hover{
+    cursor: pointer;
+    color: #193a6b;
+    background-color: #ffffff;
 }
 #facebook_container{
     width: 400px;
@@ -703,7 +771,9 @@ background-color: #bf282d;
     font-size: 20px;
     color: #ffffff;
     margin-bottom: 70px;
+    font-family: 'Josefin Sans',sans-serif;
     font-weight: 200;
+
 }
 #cp_box #cp_text button{
     background-color: rgba(0,0,0, .1);
@@ -713,11 +783,15 @@ background-color: #bf282d;
     width: 240px;
     font-size: 18px;
     border: 1px solid #ffffff;
+    font-family: 'Josefin Sans',sans-serif;
+    font-weight: 200;
+    transition: .8s;
 }
 #cp_box #cp_text button:hover{
     cursor: pointer;
     background-color: rgba(255, 255, 255, 1);
     color: #000000;
+    transition-timing-function: ease;
 }   /*  ENDING custom paint */
 footer{ /*  STARTING FOOTER */
     display: flex;
@@ -744,6 +818,8 @@ footer{ /*  STARTING FOOTER */
     flex-direction: column;
     align-items: center;
     padding: 240px 0 0 0;
+    font-family: 'Josefin Sans',sans-serif;
+    font-weight: 300;
 }
 #footer_contacts h1{
     font-size: 65px;
@@ -758,13 +834,19 @@ footer{ /*  STARTING FOOTER */
 }
 #item1{
     grid-area: a;
+    font-family: 'Josefin Sans',sans-serif;
+    font-weight: 400;
 }
 #item2{
     grid-area: b;
     margin-bottom: 20px;
+    font-family: 'Josefin Sans',sans-serif;
+    font-weight: 400;
 }
 #item3{
     grid-area: c;
+    font-family: 'Josefin Sans',sans-serif;
+    font-weight: 400;
 }
 #contact_infos h4{
     font-size: 22px;
@@ -790,7 +872,8 @@ footer{ /*  STARTING FOOTER */
     text-align: center;
     font-size: 18px;
     color: #ffffff;
-    font-weight: 200;
+    font-family: 'Josefin Sans',sans-serif;
+    font-weight: 300;
 }
 .footer_nav{    /*  footer nav */
     display: flex;
