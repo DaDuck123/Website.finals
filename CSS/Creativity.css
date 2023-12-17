@@ -24,6 +24,7 @@
     background-repeat: no-repeat;
     background-attachment: scroll;
     background-size: auto;
+    object-fit: cover;
 }
 
 #navbox_bg {
@@ -540,7 +541,9 @@ h4 {
 .productsection {
     width: 100%;
     display: flex;
+    flex-wrap: wrap;
     gap: 27px;
+
 }
 
 .hoddieimg,
@@ -1102,6 +1105,16 @@ footer {
     height: 960px;
 }
 
+#login_logo {
+    /* logo */
+    position: absolute;
+    width: 150px;
+    cursor: pointer;
+    left: 50%;
+    top: 150px;
+    transform: translate(-50%, -70%);
+}
+
 #loginbg_wrapper {
     background-image: url(../images/racingcars.jpg);
     background-position: center;
@@ -1129,7 +1142,6 @@ footer {
     width: 700px;
     gap: 1px;
     background-color: #ffffff;
-    border-radius: 10px;
     transition: 0.5s;
 }
 
@@ -1195,9 +1207,9 @@ form {
     padding: 20px;
     border: none;
     background-color: #fcf5f5;
-    border-radius: 5px;
     font-family: 'Josefin Sans', sans-serif;
     font-weight: 400;
+    border-radius: 5px;
 }
 
 #login_container input:nth-child(1) {
@@ -1232,7 +1244,7 @@ form {
     cursor: pointer;
 }
 
-#login_container a:nth-child(5) {
+#login_btn a {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -1246,10 +1258,9 @@ form {
     font-weight: 400;
     letter-spacing: 2px;
     transition: .8s;
-    border-radius: 10px;
 }
 
-#login_container a:nth-child(5):hover {
+#login_btn a:hover {
     color: #193a6b;
     background-color: #ffffff;
     border: 1px solid #000000;
@@ -1272,15 +1283,18 @@ form {
 
 }
 
-#register_link a {
+#reg_btn {
+    background-color: transparent;
+    cursor: pointer;
     margin-left: 5px;
     color: #4d4d4d;
     text-decoration: none;
     margin-top: 10px;
     font-size: 13px;
+    border: none;
 }
 
-#register_link a:hover {
+#reg_btn:hover {
     text-decoration: underline;
 }
 
@@ -1289,12 +1303,12 @@ form {
 #register_box {
     /*  Start of Register Page  */
     display: flex;
+    display: none;
+    justify-content: center;
     align-items: center;
     height: 520px;
-    width: 800px;
-    gap: 1px;
-    background-color: #ffffff;
-    border-radius: 10px;
+    width: 100%;
+    margin-top: 20px;
     transition: 0.5s;
 
 }
@@ -1302,14 +1316,12 @@ form {
 #regbg_side {
     background-image: url(../images/ferrariimg.jpg);
     display: flex;
-    width: 500px;
+    width: 300px;
     height: 100%;
     object-fit: cover;
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
-    border-top-left-radius: 10px;
-    border-bottom-left-radius: 10px;
 }
 
 #regbg_side h1 {
@@ -1340,11 +1352,10 @@ form {
     flex-direction: column;
     align-items: center;
     height: 510px;
-    width: 700px;
+    width: 500px;
     gap: 1px;
     background-color: #ffffff;
     padding: 10px 15px 0 15px;
-    border-radius: 10px;
 }
 
 #register_container h1 {
@@ -1361,9 +1372,9 @@ form {
 
 #register_container input {
     padding: 20px;
-    border-radius: 10px;
     border: none;
     background-color: #fcf5f5;
+    border-radius: 5px;
 }
 
 #names {
@@ -1429,7 +1440,7 @@ form {
     margin-top: 10px;
 }
 
-#register_btn button {
+#register_btn a {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -1445,15 +1456,13 @@ form {
     transition: .8s;
     border: none;
     font-size: 15px;
-    border-radius: 10px;
 }
 
-#register_btn button:hover {
+#register_btn a:hover {
     cursor: pointer;
     color: #193a6b;
     background-color: #ffffff;
     border: 1px solid #000000;
-    border-radius: 10px;
 }
 
 #login_link {
@@ -1473,7 +1482,10 @@ form {
     text-shadow: none;
 }
 
-#login_link a {
+#log_btn {
+    cursor: pointer;
+    border: none;
+    background-color: transparent;
     color: #4d4d4d;
     text-decoration: none;
     font-family: 'Josefin Sans', sans-serif;
@@ -1482,6 +1494,336 @@ form {
     margin-left: 5px;
 }
 
-#login_link a:hover {
+#log_btn:hover {
     text-decoration: underline;
+}
+
+/*  Ending Regristration Page*/
+
+#contact_container {
+    /*  Inquiry Page    */
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+    height: 1050px;
+    background-color: #e6e6e6;
+}
+
+#contact_nav {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    height: 50px;
+    color: #ffffff;
+    margin-bottom: 10px;
+    background-color: rgba(32, 62, 107, .8);
+}
+
+#cnav_box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 1080px;
+    height: 40px;
+}
+
+#cnav_box a {
+    margin: 0 16px;
+    text-decoration: none;
+    font-family: 'Josefin Sans', sans-serif;
+    font-weight: 300;
+}
+
+#cnav_box a:hover {
+    text-decoration: underline;
+}
+
+#c_page {
+    display: flex;
+    justify-content: center;
+    height: 1050px;
+}
+
+#c_border {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 1080px;
+    height: 1000px;
+    background-color: #ffffff;
+}
+
+#inq_box {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    width: 900px;
+}
+
+#inq_box h1 {
+    display: flex;
+    justify-content: center;
+    margin: 10px 0;
+    color: #ffffff;
+    background-color: rgba(32, 62, 107, .8);
+    width: 1080px;
+
+}
+
+
+#inq_box form {
+    width: 100%;
+    height: 100%;
+}
+
+#inq_box input {
+    margin-top: 10px;
+    display: flex;
+    padding: 10px;
+    height: 30px;
+    font-size: 15px;
+    border: 2px groove rgba(0, 0, 0, .2);
+}
+
+#inq_box label {
+    font-size: 18px;
+
+}
+
+#full {
+    width: 900px;
+}
+
+#form1 {
+    display: flex;
+    gap: 5px;
+    width: 900px;
+}
+
+#form1 label {
+    width: 900px;
+}
+
+#form1 input:nth-child(1) {
+    display: flex;
+    width: 450px;
+}
+
+#form1 input:nth-child(2) {
+    display: flex;
+    width: 450px;
+}
+
+#form2,
+#form5 {
+    margin-top: 10px;
+    display: flex;
+    flex-direction: column;
+    width: 900px;
+}
+
+#form1 input {
+    display: flex;
+    width: 350px;
+}
+
+#form2 input {
+    display: flex;
+    width: 878px;
+}
+
+#form_mixed {
+    margin-top: 10px;
+    display: flex;
+    justify-content: flex-start;
+    width: 900px;
+    gap: 5px;
+}
+
+#form3 input {
+    display: flex;
+    width: 425px;
+}
+
+#form4 input {
+    display: flex;
+    width: 424px;
+}
+
+#form5 textarea {
+    margin-top: 10px;
+    height: 70px;
+    border: 2px groove rgba(0, 0, 0, .2);
+    padding: 10px;
+    font-size: 15px;
+}
+
+#submit_btn {
+    margin-top: 10px;
+    display: flex;
+}
+
+#submit_btn button {
+    cursor: pointer;
+    height: 50px;
+    width: 200px;
+    background-color: #193a6b;
+    font-family: 'Bebas Neue';
+    font-weight: 400;
+    font-size: 20px;
+    color: #ffffff;
+    border: none;
+    transition: .8s;
+}
+
+#submit_btn button:hover {
+    background-color: #ffffff;
+    color: #193a6b;
+    border: 1px solid #000000;
+}
+
+/*  End of Inquiry Page*/
+
+#contacts {
+    width: 900px;
+
+}
+
+#cbg_opacity {
+    display: flex;
+    justify-content: center;
+    height: 40px;
+    width: 1080px;
+    background-color: rgba(32, 62, 107, .8);
+    margin-bottom: 20px;
+}
+
+#contacts p:nth-child(1) {
+    font-family: 'Josefin Sans', sans-serif;
+    margin-bottom: 10px;
+    font-size: 20px;
+    font-weight: 300;
+}
+
+#contacts p:nth-child(2) {
+    font-family: 'Josefin Sans', sans-serif;
+    margin-bottom: 10px;
+    font-size: 20px;
+    font-weight: 300;
+}
+
+#contacts p:nth-child(2) span {
+    font-family: 'Josefin Sans', sans-serif;
+    font-weight: 600;
+    margin-bottom: 10px;
+    color: #193a6b;
+}
+
+#contacts p:nth-child(3) {
+    font-weight: 300;
+    font-family: 'Josefin Sans', sans-serif;
+    margin-bottom: 10px;
+    font-size: 20px;
+}
+
+#c_phone h1,
+#quote_email h1,
+#Contact_info h1 {
+    font-size: 20px;
+    display: flex;
+    align-items: center;
+    text-align: start;
+    color: #4d4d4d;
+    font-family: 'Josefin Sans', sans-serif;
+    font-weight: 700;
+    background-color: transparent;
+    letter-spacing: normal;
+    margin: 10px 0;
+
+}
+
+#c_phone h4,
+#quote_email h4,
+#Contact_info h4 {
+    font-weight: 300;
+    font-family: 'Josefin Sans', sans-serif;
+    margin-bottom: 5px;
+    font-size: 20px;
+    text-shadow: none;
+}
+
+#c_phone h4 span {
+    font-weight: 600;
+    color: #000000;
+    margin-left: 5px;
+}
+
+#quote_email span,
+#Contact_info span {
+    cursor: pointer;
+    font-weight: 600;
+    color: #193a6b;
+    margin-left: 5px;
+    text-decoration: underline;
+}
+@media(max-width: 600px){
+    html{
+        width: 100%;
+    }
+    #loginbg_side,
+    #login_o{
+        display: none;
+    }
+    #login_box {
+        width: 100%;
+        padding: 0 20px 0 20px;
+    }
+    #login_bgo{
+        display: flex;
+        justify-content: center;
+    }
+}
+@media(max-width: 600px){
+    html{
+        width: 100%;
+    }
+    #regbg_side,
+    #reg_o{
+        display: none;
+    }
+    #login_box {
+        width: 100%;
+        padding: 0 20px 0 20px;
+    }
+    #login_bgo{
+        display: flex;
+        justify-content: center;
+    }
+}
+@media(max-width: 425px){
+    html{
+        width: 100%;
+    }
+    #regbg_side,
+    #reg_o{
+        display: none;
+    }
+    #login_box {
+        display: flex;
+        align-items: center;
+        max-width: 380px;
+        background-color: #ffffff;
+        transition: 0.5s;
+    }
+    #register_box{
+        display: flex;
+        align-items: center;
+        max-width: 380px;
+        padding: 0 50px 0 50px;
+    }
+    #login_bgo{
+        display: flex;
+        justify-content: center;
+    }
 }
