@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>login-reg</title>
     <link rel="stylesheet" href="CSS/Creativity.css">
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -17,7 +17,7 @@
 <body>
     <div id="login_body">
         <div id="loginbg_wrapper">
-            <img src="images/main_logo.png" alt="logo" class="logo">
+            <img src="images/main_logo.png" alt="login_logo" id="login_logo">
             <div id="login_bgo">
                 <div id="login_box">
                     <div id="loginbg_side">
@@ -29,7 +29,7 @@
                     </div>
                     <div id="login_container">
                         <h1>Sign in</h1>
-                        <form action="#">
+                        <form>
                             <input type="text" type="email" placeholder="Username" />
                             <input type="password" placeholder="Password" />
                             <div id="check">
@@ -40,12 +40,14 @@
                                 <img src="/images/twit.png" alt="">
                                 <img src="/images/insta.png" alt="">
                             </div>
-                            <a href="Index.html">Login</a>
-                            <div id="register_link">
-                                <h4>Don't have an account?</h4>
-                                <a href="">Register Here</a>
+                            <div id="login_btn">
+                                <a href="Index.html">Login</a>
                             </div>
                         </form>
+                        <div id="register_link">
+                            <h4>Don't have an account?</h4>
+                            <button id="reg_btn">Register Here</button>
+                        </div>
                     </div>
                 </div>
                 <div id="register_box">
@@ -58,12 +60,12 @@
                     </div>
                     <div id="register_container">
                         <h1>Register</h1>
-                        <form action="Index.html">
+                        <form>
                             <div id="names">
-                                <input type="text" placeholder="First-Name" />
-                                <input type="text" placeholder="Last-Name" />
+                                <input type="text" placeholder="First Name" />
+                                <input type="text" placeholder="Last Name" />
                                 <input type="number" placeholder="Age" />
-                                <input type="number" placeholder="Mobile-Number" />
+                                <input type="number" placeholder="Mobile Number" />
                             </div>
                             <div id="info">
                                 <input type="text" placeholder="Address" />
@@ -77,17 +79,18 @@
                                 <input type="checkbox">Agree to terms & conditions</input>
                             </div>
                             <div id="register_btn">
-                                <button>Register</button>
-                            </div>
-                            <div id="login_link">
-                                <h4>Have an account?</h4>
-                                <a href="">Login here</a>
+                                <a href="Index.html">Register</a>
                             </div>
                         </form>
+                        <div id="login_link">
+                            <h4>Have an account?</h4>
+                            <button id="log_btn">Login here</button>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
+    </div>
 </body>
 <script src="JS/Creativity.js"></script>
 
