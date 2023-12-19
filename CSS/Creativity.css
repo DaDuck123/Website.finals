@@ -541,7 +541,6 @@ h4 {
 .productsection {
     width: 100%;
     display: flex;
-    flex-wrap: wrap;
     gap: 27px;
 
 }
@@ -632,6 +631,7 @@ h4 {
 .tab-box {
     display: flex;
     justify-content: center;
+    align-items: center;
     width: 700px;
 
 }
@@ -1769,7 +1769,7 @@ form {
 }
 @media(max-width: 600px){
     html{
-        width: 100%;
+        max-width: 100%;
     }
     #loginbg_side,
     #login_o{
@@ -1779,28 +1779,105 @@ form {
         width: 100%;
         padding: 0 20px 0 20px;
     }
-    #login_bgo{
-        display: flex;
-        justify-content: center;
-    }
-}
-@media(max-width: 600px){
-    html{
-        width: 100%;
-    }
     #regbg_side,
     #reg_o{
         display: none;
     }
     #login_box {
-        width: 100%;
+        max-width: 100%;
         padding: 0 20px 0 20px;
     }
     #login_bgo{
         display: flex;
         justify-content: center;
+
     }
+    .productsection {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        max-width: 100%;
+        gap: 27px;
+    
+    }
+    .other-tabs{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        height: 100%;
+        width: 100%;
+    }
+    .product-wrapper{
+        display: flex;
+        flex-wrap: wrap;
+        height: 100%;
+        justify-content: center;
+        align-items: center;
+    }
+    .tab-wrapper {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        margin: 0px 390px;
+        height: 100%;
+        width: 100%;
+    }
+    .tab-box {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        height: 100%;
+    
+    }
+    #below-tabwrapper {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+        font-size: 15px;
+        text-align: center;
+        margin: 30px 0px 20px 0px;
+        font-family: 'Josefin Sans', sans-serif;
+        font-weight: bolder;
+        color: #193a6b;
+        width: 100%;
+        height: 100%;
+    }
+    #belowmain_wrapper {
+        /*  BELOW MAIN */
+        display: flex;
+        flex-wrap: wrap;
+        width: 100%;
+        height: 100%;
+        margin-top: -1px;
+    }
+    #maininfos_padding {
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        padding: 140px 0 0 0;
+        margin: 0 90px 0 90px;
+        height: 100%;
+        width: 100%;
+    }
+    #main_box {
+        display: flex;
+        justify-content: center;
+        align-items: flex-start;
+        background-image: url(/images/sidecar.jpg);
+        background-repeat: no-repeat;
+        background-size: 580px 945px;
+        height: 100%;
+        width: 100%;
+        background-color: #e6e6e6;
+    }
+    
 }
+
 @media(max-width: 425px){
     html{
         width: 100%;
