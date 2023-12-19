@@ -25,6 +25,7 @@
     background-attachment: scroll;
     background-size: auto;
     object-fit: cover;
+    margin-bottom: 1000px;
 }
 
 #navbox_bg {
@@ -488,10 +489,12 @@ h4 {
 
 .featured-product {
     /*  Featured Products   */
-    padding: 105px 10px 49px;
+    display: flex;
+    justify-content: center;
     background-color: #ffffff;
     background-attachment: scroll;
     height: 100%;
+    margin: 100px 0 50px 0;
 }
 
 .product-wrapper {
@@ -1767,40 +1770,48 @@ form {
     margin-left: 5px;
     text-decoration: underline;
 }
-@media(max-width: 600px){
-    html{
+
+@media(max-width: 600px) {
+    html {
         max-width: 100%;
     }
+
     #loginbg_side,
-    #login_o{
+    #login_o {
         display: none;
     }
+
     #login_box {
         width: 100%;
         padding: 0 20px 0 20px;
     }
+
     #regbg_side,
-    #reg_o{
+    #reg_o {
         display: none;
     }
+
     #login_box {
         max-width: 100%;
         padding: 0 20px 0 20px;
     }
-    #login_bgo{
+
+    #login_bgo {
         display: flex;
         justify-content: center;
 
     }
+
     .productsection {
         display: flex;
         justify-content: center;
         flex-wrap: wrap;
         max-width: 100%;
         gap: 27px;
-    
+
     }
-    .other-tabs{
+
+    .other-tabs {
         display: flex;
         flex-wrap: wrap;
         justify-content: center;
@@ -1808,13 +1819,15 @@ form {
         height: 100%;
         width: 100%;
     }
-    .product-wrapper{
+
+    .product-wrapper {
         display: flex;
         flex-wrap: wrap;
         height: 100%;
         justify-content: center;
         align-items: center;
     }
+
     .tab-wrapper {
         display: flex;
         flex-wrap: wrap;
@@ -1824,6 +1837,7 @@ form {
         height: 100%;
         width: 100%;
     }
+
     .tab-box {
         display: flex;
         flex-wrap: wrap;
@@ -1831,8 +1845,9 @@ form {
         align-items: center;
         width: 100%;
         height: 100%;
-    
+
     }
+
     #below-tabwrapper {
         display: flex;
         justify-content: center;
@@ -1847,23 +1862,26 @@ form {
         width: 100%;
         height: 100%;
     }
+
     #belowmain_wrapper {
         /*  BELOW MAIN */
         display: flex;
         flex-wrap: wrap;
         width: 100%;
         height: 100%;
-        margin-top: -1px;
+        margin-bottom: 1000px;
     }
+
     #maininfos_padding {
         display: flex;
         justify-content: center;
         flex-direction: column;
         padding: 140px 0 0 0;
-        margin: 0 90px 0 90px;
+        margin: 0 0 500px 0;
         height: 100%;
         width: 100%;
     }
+
     #main_box {
         display: flex;
         justify-content: center;
@@ -1875,17 +1893,38 @@ form {
         width: 100%;
         background-color: #e6e6e6;
     }
-    
-}
 
-@media(max-width: 425px){
-    html{
+    .ft_navbg {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        background-image: url(../images/ftnav.png);
+        background-size: 100%;
         width: 100%;
     }
+
+    .footer_nav {
+        /*  footer nav */
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-top: 30px;
+        width: 100%;
+        height: 40px;
+    }
+}
+
+@media(max-width: 425px) {
+    html {
+        width: 100%;
+    }
+
     #regbg_side,
-    #reg_o{
+    #reg_o {
         display: none;
     }
+
     #login_box {
         display: flex;
         align-items: center;
@@ -1893,14 +1932,251 @@ form {
         background-color: #ffffff;
         transition: 0.5s;
     }
-    #register_box{
-        display: flex;
+
+    #register_box {
+        display: none;
         align-items: center;
         max-width: 380px;
         padding: 0 50px 0 50px;
     }
-    #login_bgo{
+
+    #login_bgo {
         display: flex;
         justify-content: center;
+    }
+}
+
+@media(max-width: 780px) {
+    header {
+        /* Header */
+        position: absolute;
+        padding: 0;
+        width: 100%;
+        height: 100%;
+    }
+    .header_apps {
+        align-items: center;
+    }
+    .header_infos {
+        /*   Header Infos    */
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .logo{
+        display: none;
+    }
+    #buybtn_box {
+        display: flex;
+        justify-content: center;
+        width: 100%;
+        height: 100%;
+        background-color: transparent;
+    }
+    .buy-btn {
+        margin-top: 0;
+    }
+
+    .below_header {
+        z-index: auto;
+        display: flex;
+        left: 50%;
+        transform: translate(-50%, 50%);
+        flex-direction: column;
+        position: absolute;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        height: 700px;
+        background-color: #193a6b;
+        margin-top: 50px;
+    }
+
+    .quote {
+        display: flex;
+        justify-content: center;
+        width: 100%;
+        margin-bottom: 20px;
+
+    }
+
+    #header_container {
+        display: flex;
+        justify-content: center;
+        width: 100%;
+        height: 100%;
+    }
+
+    .container {
+        position: none;
+        width: 100%;
+        height: 100%;
+        background-image: none;
+    }
+
+    .header_wrapper {
+        position: absolute;
+        left: 50%;
+        transform: translate(-50%, 5%);
+        z-index: 1;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        flex-wrap: wrap;
+        gap: 0;
+        background-color: #193a6b;
+        width: 100%;
+        margin-top: 24px;
+    }
+
+    #main_containerbg {
+        /* Starting Main Area*/
+        display: flex;
+        justify-content: center;
+        width: 100%;
+        height: 100%;
+        margin-top: 60px;
+    }
+
+    #main_container {
+        display: flex;
+        justify-content: center;
+        width: 100%;
+        height: 100%;
+        background-color: #e6e6e6;
+    }
+
+    #main_box {
+        background-image: none;
+        display: flex;
+        justify-content: center;
+        height: 100%;
+        width: 100%;
+        background-color: #e6e6e6;
+    }
+
+    #maininfos_text {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        background-color: #ffffff;
+        width: 100%;
+        height: 100%;
+        padding: 0;
+    }
+
+    #maininfos_text p {
+        text-align: justify;
+        width: 600px;
+        height: 200px;
+    }
+
+    #maininfos_sidebg {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        height: 100%;
+
+    }
+
+    #main_containerbg {
+        /* Starting Main Area*/
+        width: 100%;
+        height: 100%;
+    }
+
+    #maininfos_box {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        height: 100%;
+    }
+
+    #box1,
+    #box2,
+    #box3,
+    #box4,
+    #box5 {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 30px 10px 20px 10px;
+        width: 200px;
+        height: 200px;
+
+    }
+
+    #maininfos_padding {
+        padding: 0;
+        margin: 0;
+        height: 100%;
+        width: 100%;
+    }
+
+    #belowmain_wrapper {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        height: 100%;
+        margin-top: 0;
+        gap: 5px;
+    }
+
+    .productsection {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+
+    .product-box {
+        width: 100%;
+        flex-wrap: wrap;
+    }
+
+    .product-wrapper {
+        height: 100%;
+    }
+
+    .other-tabs {
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .tab-wrapper {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        height: 100%;
+        width: 100%;
+        margin: 0;
+    }
+
+    .tab-box {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        width: 500px;
+    }
+
+    #below-tabwrapper {
+        font-size: 15px;
+    }
+
+    .footer_nav {
+        width: 100%;
+        flex-wrap: wrap;
+    }
+
+    .navbarbox {
+        width: 100%;
     }
 }
